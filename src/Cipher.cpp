@@ -1,6 +1,5 @@
 #include "Cipher.h"
 #include <algorithm>
-#include <iostream>
 #include <ranges>
 #include <string>
 #include <set>
@@ -17,7 +16,6 @@ Cipher::Cipher(std::string secret) : m_secret(secret)
     );
     createKey();
     createTransposedAlpha();
-    std::cout << m_key;
 }
 
 void Cipher::createKey()
