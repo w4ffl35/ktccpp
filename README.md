@@ -4,7 +4,7 @@ This is a basic keyword transposition cipher written in C++
 
 ## Prerequisites
 
-- CMake 3.24
+- CMake 3.22 or higher
 - C++23 compiler
 
 ## Build
