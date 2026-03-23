@@ -9,10 +9,10 @@ int main()
     uint in_choice = 0;
 
     std::cout << "Enter secret key: ";
-    std::cin >> in_secret;
+    std::getline(std::cin, in_secret);
 
     std::cout << "Enter message: ";
-    std::cin >> in_message;
+    std::getline(std::cin, in_message);
     
     auto cipher = Encryption::Cipher(static_cast<std::string>(in_secret));
 
@@ -31,7 +31,7 @@ int main()
         cipher.decrypt(static_cast<std::string>(in_message), out_message);
     }
 
-    std::cout << out_message;
+    std::cout << out_message << "\n";
 
     return 0;
 }
