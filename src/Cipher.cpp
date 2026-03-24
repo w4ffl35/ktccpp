@@ -69,7 +69,10 @@ void Cipher::encrypt(
     convertMessage(in_message, out_message, ALPHA, m_transposed_alpha);
 }
 
-void Cipher::decrypt(std::string in_message, std::string &out_message)
+void Cipher::decrypt(
+    std::string in_message, 
+    std::string &out_message
+)
 {
     auto ALPHA = get_alpha();
     convertMessage(in_message, out_message, m_transposed_alpha, ALPHA);
