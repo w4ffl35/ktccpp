@@ -5,9 +5,13 @@
 #include <set>
 #include <utility>
 
+
 namespace Encryption
 {
-Cipher::Cipher(std::string secret) : m_secret(std::move(secret))
+
+Cipher::Cipher(
+    std::string secret
+) : m_secret(std::move(secret))
 {
     std::transform(
         m_secret.begin(), m_secret.end(), m_secret.begin(), ::toupper
@@ -16,7 +20,8 @@ Cipher::Cipher(std::string secret) : m_secret(std::move(secret))
     createTransposedAlpha();
 }
 
-const std::string &Cipher::get_alpha() {
+const std::string &Cipher::get_alpha()
+{
     static const std::string ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     return ALPHA;
 }
@@ -55,7 +60,10 @@ void Cipher::createTransposedAlpha()
     }
 }
 
-void Cipher::encrypt(std::string in_message, std::string &out_message)
+void Cipher::encrypt(
+    std::string in_message, 
+    std::string &out_message
+)
 {
     auto ALPHA = get_alpha();
     convertMessage(in_message, out_message, ALPHA, m_transposed_alpha);
@@ -72,7 +80,7 @@ void Cipher::convertMessage(
     std::string &out_message,
     const std::string& alpha_a,
     std::string alpha_b
-)
+) 
 {
     prepareMessages(in_message, out_message);
     auto msg_length = in_message.length();
@@ -91,11 +99,15 @@ void Cipher::convertMessage(
     }
 }
 
-void Cipher::prepareMessages(std::string &in_message, std::string &out_message)
+void Cipher::prepareMessages(
+    std::string &in_message,
+    std::string &out_message
+) 
 {
     std::transform(
         in_message.begin(), in_message.end(), in_message.begin(), ::toupper
     );
     out_message = "";
 }
+
 }
