@@ -1,8 +1,10 @@
 #pragma once
 #include <string>
 
+
 namespace Encryption
 {
+
 class Cipher
 {
 public:
@@ -25,4 +27,5 @@ private:
         std::string alpha_b
     );
 };
+
 }
