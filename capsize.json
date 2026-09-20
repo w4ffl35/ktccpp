@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Capsize-Games/capsize-ci/1a50d06c20022f9bbc44bad002add302e1dae646/schema/capsize-1.json",
+  "schema_version": 1,
+  "standards": "1.x",
+  "name": "ktccpp",
+  "type": "tool",
+  "languages": ["cpp"],
+  "framework": null,
+  "databases": [],
+  "runtimes": {"cmake": "3.22", "cpp": "c++23"},
+  "entrypoints": {
+    "binary": "src/main.cpp"
+  },
+  "task_runner": "just",
+  "commands": {
+    "setup": "setup",
+    "build": "build",
+    "test": "test",
+    "lint": "lint",
+    "format": "format",
+    "typecheck": "typecheck",
+    "run": "run",
+    "clean": "clean",
+    "docs": "docs",
+    "ci": "ci"
+  },
+  "dependencies": {
+    "cmake": "CMakeLists.txt"
+  },
+  "instructions": {
+    "canonical": "AGENTS.md",
+    "rules": ["capsize/base", "capsize/tool", "capsize/lang/cpp"]
+  },
+  "owner": "w4ffl35",
+  "license": "GPL-3.0-only"
+}
