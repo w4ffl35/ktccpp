@@ -17,9 +17,9 @@ interactive entry point.
    binaries or build trees.
 3. Review changes to cipher ordering, key handling, and decrypt/encrypt
    symmetry against the existing interactive behavior.
-4. The repository currently has no automated test suite. Its private CI
-   workflow runs on the workstation runner queue; do not report coverage or
-   other CI results that were not actually run.
+4. The repository currently has no automated test suite. Its public CI
+   workflow runs on GitHub-hosted Actions; do not report coverage or other CI
+   results that were not actually run.
 
 ## Task interface
 

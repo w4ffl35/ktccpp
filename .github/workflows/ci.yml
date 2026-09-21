@@ -9,8 +9,8 @@ permissions:
 
 jobs:
   build:
-    # This repository is private and uses the workstation runner queue.
-    runs-on: [self-hosted, Linux, X64, ktccpp-ci]
+    # This repository is public and uses GitHub-hosted Actions.
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Check shell entry point
